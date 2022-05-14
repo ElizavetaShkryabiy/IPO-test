@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ElementsTest {
+public class CreateUserTest {
     private SelenideElement regResponce = $(".registation__respons-titl");
     @BeforeEach
     void setup() {
@@ -20,7 +20,7 @@ public class ElementsTest {
     public void create3ndLineUser() {
         DataHelper.UserInfo info = DataHelper.getInfoForUsers();
         var page = new RegistrationPage();
-        page.createUser(info., info.);
+        page.createUser(info.getEMail(), info.getPhoneNumber());
         var actual = regResponce.getOwnText();
         assertEquals("Данные успешно заполнены", actual);
     }

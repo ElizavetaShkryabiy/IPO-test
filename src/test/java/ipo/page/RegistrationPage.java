@@ -34,6 +34,8 @@ public class RegistrationPage {
     private SelenideElement lastButton = $(".avatar__btn");
     private SelenideElement profilePhotoButton = $("[for='dropInput']");
 
+    String photo = "\"C:\\Users\\Елизавета\\Pictures\\151109175742.jpeg\"";
+
 
     public void createUser(String mail, String number) {
         eMail.setValue(mail);
@@ -56,8 +58,8 @@ public class RegistrationPage {
 
         lastName.setValue("LastName");
         parentName.setValue("parentName");
-        status;
-        statusOption;
+        status.click();
+        statusOption.click();
         citizenship.setValue("Российская Федерация");
         livingCountry.setValue("Россия");
         livingAdress.setValue("Россия, г Санкт-Петербург, ул Боровая, 5");
